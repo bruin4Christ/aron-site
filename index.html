@@ -12,14 +12,14 @@
 <meta property="og:site_name" content="Áron">
 <meta property="og:title" content="Áron — free live translation for church">
 <meta property="og:description" content="The best translation models, without the middleman. The software is free; you pay the providers directly, from about $0.15 an hour.">
-<meta property="og:image" content="https://arontranslate.com/img/operator.png">
-<meta property="og:image:width" content="2040">
-<meta property="og:image:height" content="982">
+<meta property="og:image" content="https://arontranslate.com/img/op-ro-en.png">
+<meta property="og:image:width" content="2560">
+<meta property="og:image:height" content="974">
 <meta property="og:image:alt" content="Áron operator screen: a Romanian sermon captioned live in English">
 <meta name="twitter:card" content="summary_large_image">
 <meta name="twitter:title" content="Áron — free live translation for church">
 <meta name="twitter:description" content="The best translation models, without the middleman. Free software, from about $0.15 an hour.">
-<meta name="twitter:image" content="https://arontranslate.com/img/operator.png">
+<meta name="twitter:image" content="https://arontranslate.com/img/op-ro-en.png">
 <meta name="theme-color" content="#0d0f14">
 <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='14' fill='%230d0f14'/%3E%3Ctext x='32' y='46' font-family='Georgia,serif' font-size='40' font-weight='700' text-anchor='middle' fill='%23e8b85c'%3E%C3%81%3C/text%3E%3C/svg%3E">
 <script type="application/ld+json">
@@ -31,8 +31,8 @@
   "description": "Free software for live church translation: speech in 60+ languages captioned live on the screen, in ProPresenter and on phones, with optional spoken translation.",
   "url": "https://arontranslate.com/",
   "downloadUrl": "https://github.com/seekeroftruth27/aron-public/releases/latest",
-  "image": "https://arontranslate.com/img/operator.png",
-  "screenshot": ["https://arontranslate.com/img/operator.png", "https://arontranslate.com/img/projector.png", "https://arontranslate.com/img/phone.png"],
+  "image": "https://arontranslate.com/img/op-ro-en.png",
+  "screenshot": ["https://arontranslate.com/img/op-ro-en.png", "https://arontranslate.com/img/op-ko-en.png", "https://arontranslate.com/img/op-uk-en.png", "https://arontranslate.com/img/projector.png", "https://arontranslate.com/img/phone.png"],
   "applicationCategory": "MultimediaApplication",
   "operatingSystem": "Windows 10, Windows 11",
   "license": "https://opensource.org/licenses/MIT",
@@ -54,7 +54,7 @@
 html{scroll-behavior:smooth}
 body{background:var(--bg);color:var(--ink);font:400 17px/1.6 Inter,system-ui,sans-serif;-webkit-font-smoothing:antialiased}
 a{color:inherit}
-img{display:block;max-width:100%}
+img{display:block;max-width:100%;height:auto}
 .wrap{max-width:var(--max);margin:0 auto;padding:0 20px}
 h1,h2,h3{font-family:Fraunces,Georgia,serif;font-weight:600;letter-spacing:-.01em;line-height:1.12}
 
@@ -105,6 +105,13 @@ nav .links a:hover{color:var(--ink)}
 .frame .bar{height:34px;display:flex;align-items:center;gap:7px;padding:0 14px;border-bottom:1px solid var(--line)}
 .frame .bar i{width:11px;height:11px;border-radius:50%;background:#2c3242}
 .frame .bar b{margin-left:10px;font:500 12px Inter;color:var(--mute)}
+.langtabs{display:flex;flex-wrap:wrap;justify-content:center;gap:8px;margin-bottom:18px}
+.langtabs button{font:500 14px Inter,sans-serif;color:var(--mute);background:transparent;border:1px solid var(--line);border-radius:999px;padding:7px 14px;cursor:pointer;transition:color .2s,border-color .2s,background .2s}
+.langtabs button:hover{color:var(--ink);border-color:var(--mute)}
+.langtabs button[aria-selected="true"]{color:#1b1406;background:var(--gold);border-color:var(--gold)}
+.shots{display:grid}
+.shots img{grid-area:1/1;width:100%;opacity:0;transition:opacity .6s ease}
+.shots img.on{opacity:1}
 .cap{text-align:center;color:var(--mute);font-size:15px;margin-top:16px}
 
 /* three screens */
@@ -214,9 +221,22 @@ footer .wrap{display:flex;justify-content:space-between;gap:16px;flex-wrap:wrap}
 </div></header>
 
 <div class="show"><div class="wrap rv">
+  <div class="langtabs" role="tablist" aria-label="Language examples">
+    <button role="tab" aria-selected="true" data-i="0">Romanian → English</button>
+    <button role="tab" aria-selected="false" data-i="1">Korean → English</button>
+    <button role="tab" aria-selected="false" data-i="2">Ukrainian → English</button>
+    <button role="tab" aria-selected="false" data-i="3">English → Spanish</button>
+    <button role="tab" aria-selected="false" data-i="4">English → Chinese</button>
+  </div>
   <div class="frame">
     <div class="bar"><i></i><i></i><i></i><b>Áron — operator</b></div>
-    <img src="img/operator.png" alt="The Áron operator screen: Romanian sermon on the left, live English translation on the right" width="2040" height="982">
+    <div class="shots">
+      <img class="on" src="img/op-ro-en.png" alt="Áron operator screen: a Romanian sermon captioned live in English" width="2560" height="974">
+      <img src="img/op-ko-en.png" alt="Áron operator screen: a Korean sermon captioned live in English" width="2560" height="974" loading="lazy">
+      <img src="img/op-uk-en.png" alt="Áron operator screen: a Ukrainian sermon captioned live in English" width="2560" height="974" loading="lazy">
+      <img src="img/op-en-es.png" alt="Áron operator screen: an English sermon captioned live in Spanish" width="2560" height="974" loading="lazy">
+      <img src="img/op-en-zh.png" alt="Áron operator screen: an English sermon captioned live in Chinese" width="2560" height="974" loading="lazy">
+    </div>
   </div>
   <p class="cap">The operator screen: what's said on the left, the translation on the right, as it happens.</p>
 </div></div>
@@ -331,6 +351,15 @@ const io = new IntersectionObserver(es => es.forEach(e => {
   if (e.isIntersecting) { e.target.classList.add('in'); io.unobserve(e.target); }
 }), {threshold: .12});
 document.querySelectorAll('.rv').forEach(el => io.observe(el));
+const tabs = [...document.querySelectorAll('.langtabs button')], shots = [...document.querySelectorAll('.shots img')];
+let cur = 0, auto = setInterval(() => show((cur + 1) % shots.length), 4500);
+function show(i) {
+  cur = i;
+  shots.forEach((im, k) => im.classList.toggle('on', k === i));
+  tabs.forEach((b, k) => b.setAttribute('aria-selected', k === i));
+}
+tabs.forEach(b => b.addEventListener('click', () => { clearInterval(auto); show(+b.dataset.i); }));
+if (matchMedia('(prefers-reduced-motion: reduce)').matches) clearInterval(auto);
 </script>
 </body>
 </html>
