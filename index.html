@@ -30,15 +30,15 @@
   "alternateName": ["Aron", "Áron church translation"],
   "description": "Free software for live church translation: speech in 60 languages captioned live in up to 150, on the screen, in ProPresenter and on phones, with optional spoken translation.",
   "url": "https://arontranslate.com/",
-  "downloadUrl": "https://github.com/seekeroftruth27/aron-public/releases/latest/download/church-translate.exe",
+  "downloadUrl": "https://github.com/seekeroftruth27/aron-translate/releases/latest/download/church-translate.exe",
   "image": "https://arontranslate.com/img/op-ro-en.png",
   "screenshot": ["https://arontranslate.com/img/op-ro-en.png", "https://arontranslate.com/img/op-ko-en.png", "https://arontranslate.com/img/op-uk-en.png", "https://arontranslate.com/img/projector.png", "https://arontranslate.com/img/phone.png"],
   "applicationCategory": "MultimediaApplication",
-  "operatingSystem": "Windows 10, Windows 11",
+  "operatingSystem": "Windows 10, Windows 11, Linux",
   "license": "https://opensource.org/licenses/MIT",
   "isAccessibleForFree": true,
   "offers": {"@type": "Offer", "price": "0", "priceCurrency": "USD"},
-  "sameAs": ["https://github.com/seekeroftruth27/aron-public"]
+  "sameAs": ["https://github.com/seekeroftruth27/aron-translate"]
 }
 </script>
 <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -245,8 +245,8 @@ footer .wrap{display:flex;justify-content:space-between;gap:16px;flex-wrap:wrap}
     <a class="hide-sm" href="#cost">Cost</a>
     <a class="hide-sm" href="#how">How it works</a>
     <a class="hide-sm" href="#faq">FAQ</a>
-    <a class="hide-sm" href="https://github.com/seekeroftruth27/aron-public">GitHub</a>
-    <a class="btn primary sm" href="https://github.com/seekeroftruth27/aron-public/releases/latest/download/church-translate.exe" download>Download</a>
+    <a class="hide-sm" href="https://github.com/seekeroftruth27/aron-translate">GitHub</a>
+    <a class="btn primary sm" href="https://github.com/seekeroftruth27/aron-translate/releases/latest/download/church-translate.exe" download>Download</a>
   </div>
 </div></nav>
 
@@ -256,10 +256,11 @@ footer .wrap{display:flex;justify-content:space-between;gap:16px;flex-wrap:wrap}
   <p class="verse">“He shall speak for you to the people, and he shall be your mouth.” <span>Exodus 4:16</span></p>
   <p class="lede">Áron is free software that captions your service live, in your congregation's language. You connect it to top professional speech and AI models with your own keys and pay those companies directly. There's no subscription and no markup.</p>
   <div class="ctas">
-    <a class="btn primary" href="https://github.com/seekeroftruth27/aron-public/releases/latest/download/church-translate.exe" download>Download for Windows</a>
+    <a class="btn primary" href="https://github.com/seekeroftruth27/aron-translate/releases/latest/download/church-translate.exe" download>Download for Windows</a>
+    <a class="btn ghost" href="https://github.com/seekeroftruth27/aron-translate/releases/latest/download/church-translate-linux-x86_64.tar.gz" download>Download for Linux</a>
     <a class="btn ghost" href="#cost">See what it costs</a>
   </div>
-  <small>Free and MIT licensed · Windows 10/11 · from about $0.15 an hour</small>
+  <small>Free and open source (MIT) · Windows 10/11 and Linux (also <a href="https://github.com/seekeroftruth27/aron-translate/releases/latest/download/church-translate-linux-arm64.tar.gz" download>Raspberry Pi</a>) · from about $0.15 an hour</small>
 
   <div class="equation rv">
     <div class="term"><div class="lbl">The software</div><div class="big">$0</div><p>Áron is free. No seats, no plans, no account with us.</p></div>
@@ -673,7 +674,7 @@ footer .wrap{display:flex;justify-content:space-between;gap:16px;flex-wrap:wrap}
 <section id="how"><div class="wrap">
   <div class="sec-head rv"><h2>Running in five minutes</h2></div>
   <div class="steps">
-    <div class="step rv"><h3>Download</h3><p>The <b>Download</b> button gets <code>church-translate.exe</code>. Put it in its own folder; there's nothing to install. A <a href="https://github.com/seekeroftruth27/aron-public/releases/latest/download/default.env.example">sample settings file</a> lists every option.</p></div>
+    <div class="step rv"><h3>Download</h3><p>The <b>Download</b> button gets <code>church-translate.exe</code>. Put it in its own folder; there's nothing to install. On Linux, get the <a href="https://github.com/seekeroftruth27/aron-translate/releases/latest/download/church-translate-linux-x86_64.tar.gz" download>Linux download</a> (or the <a href="https://github.com/seekeroftruth27/aron-translate/releases/latest/download/church-translate-linux-arm64.tar.gz" download>Raspberry Pi one</a>), unpack it and run <code>./church-translate</code> in a terminal; it asks for your key the first time. A <a href="https://github.com/seekeroftruth27/aron-translate/releases/latest/download/default.env.example">sample settings file</a> lists every option.</p></div>
     <div class="step rv"><h3>Add one key</h3><p>Create a free Soniox account, paste the key into <code>.env</code>, and you're set. Add other keys later if you like.</p></div>
     <div class="step rv"><h3>Press Start</h3><p>Double-click the app, pick your congregation's language and click <b>Start listening</b>.</p></div>
   </div>
@@ -686,17 +687,18 @@ footer .wrap{display:flex;justify-content:space-between;gap:16px;flex-wrap:wrap}
     <details class="rv"><summary>What languages does it translate?</summary><p>It recognizes 60 spoken languages automatically and captions into all 60 with Soniox alone, and up to 150 with GPT‑6 Sol, from Spanish and Korean to Karen, Hmong and Amharic. The <a href="#languages">full tables</a> list them, and which can also be spoken. For a bilingual service it switches direction by itself when the speaker changes language.</p></details>
     <details class="rv"><summary>Does it work with ProPresenter?</summary><p>Yes. Point a ProPresenter web object at Áron's caption strip, or let Áron send the live translation into a ProPresenter message. There's also a plain full-screen caption page for any projector.</p></details>
     <details class="rv"><summary>Can people follow on their phones?</summary><p>Yes. Áron can stream captions, and optionally the spoken translation, to a page on your church's website. Put a QR code in the bulletin and people read along in the room or from home.</p></details>
-    <details class="rv"><summary>What do we need to run it?</summary><p>A Windows 10 or 11 computer with an internet connection and an audio feed from your sound desk or a microphone. All the heavy work runs in the cloud, so you don't need a powerful machine or any special hardware.</p></details>
+    <details class="rv"><summary>What do we need to run it?</summary><p>A Windows 10 or 11 computer, or a Linux PC or Raspberry Pi 4/5, with an internet connection and an audio feed from your sound desk or a microphone. All the heavy work runs in the cloud, so you don't need a powerful machine or any special hardware.</p></details>
     <details class="rv"><summary>How is this different from paid church translation services?</summary><p>Many paid services are built on the same kind of cloud speech and AI models and charge a subscription or per-minute rate on top. Áron lets you use the best models directly, at their own price, with nobody in between. <a href="#compare">See the comparison</a>.</p></details>
   </div>
 </div></section>
 
 <section id="github"><div class="wrap">
-  <div class="sec-head rv"><h2>Follow Áron on GitHub</h2>
-    <p>Every release and what changed in it, the quick start guide, and the relay that puts captions on your website. Star the repository to hear about new versions, or open an issue to tell us what your church needs.</p></div>
+  <div class="sec-head rv"><h2>Áron is open source</h2>
+    <p>The full source code is on GitHub under the MIT licence. Read how it works, run it from source, or send a fix or a new feature; contributions are welcome. You'll also find every release and what changed in it, the quick start guide, and the relay that puts captions on your website. Star the repository to hear about new versions, or open an issue to tell us what your church needs.</p></div>
   <div class="ctas rv">
-    <a class="btn ghost" href="https://github.com/seekeroftruth27/aron-public">Visit Áron on GitHub</a>
-    <a class="btn ghost" href="https://github.com/seekeroftruth27/aron-public/releases">See what's new</a>
+    <a class="btn ghost" href="https://github.com/seekeroftruth27/aron-translate/tree/source">Browse the source</a>
+    <a class="btn ghost" href="https://github.com/seekeroftruth27/aron-translate">Visit Áron on GitHub</a>
+    <a class="btn ghost" href="https://github.com/seekeroftruth27/aron-translate/releases">See what's new</a>
   </div>
 </div></section>
 
@@ -704,14 +706,14 @@ footer .wrap{display:flex;justify-content:space-between;gap:16px;flex-wrap:wrap}
   <blockquote>Let everyone in the room hear the sermon.</blockquote>
   <cite>Free for every church, in every language.</cite>
   <div class="ctas">
-    <a class="btn primary" href="https://github.com/seekeroftruth27/aron-public/releases/latest/download/church-translate.exe" download>Download Áron, free</a>
-    <a class="btn ghost" href="https://github.com/seekeroftruth27/aron-public/blob/main/QUICKSTART.md">Read the quick start</a>
+    <a class="btn primary" href="https://github.com/seekeroftruth27/aron-translate/releases/latest/download/church-translate.exe" download>Download Áron, free</a>
+    <a class="btn ghost" href="https://github.com/seekeroftruth27/aron-translate/blob/main/QUICKSTART.md">Read the quick start</a>
   </div>
 </div></div>
 
 <footer><div class="wrap">
-  <span>Áron (Aron) · free church translation software · MIT licensed</span>
-  <a href="https://github.com/seekeroftruth27/aron-public">github.com/seekeroftruth27/aron-public</a>
+  <span>Áron (Aron) · free, open-source church translation software · MIT licensed</span>
+  <a href="https://github.com/seekeroftruth27/aron-translate">github.com/seekeroftruth27/aron-translate</a>
 </div></footer>
 
 <script>
