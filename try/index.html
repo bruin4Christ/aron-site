@@ -1,0 +1,41 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="robots" content="noindex">
+<meta name="referrer" content="no-referrer">
+<title>Try Áron</title>
+<style>
+  html,body{margin:0;height:100%;background:#f0f2f6;color:#1a2230;font:18px/1.5 system-ui,sans-serif}
+  iframe{display:block;width:100%;height:100vh;height:100dvh;border:0}
+  p{max-width:30em;margin:0 auto;padding:18vh 16px 0;text-align:center}
+  a{color:inherit}
+  @media (prefers-color-scheme:dark){html,body{background:#14181f;color:#e8ebf0}}
+</style>
+</head>
+<body>
+<script>
+// The link's key stays in the #fragment, which browsers never send to this site.
+(function(){
+  var host='https://matcha.tail50e838.ts.net:8443', key=location.hash.slice(1);
+  function say(html){ var p=document.createElement('p'); p.innerHTML=html; document.body.appendChild(p); }
+  if(!/^[\w-]{16,}$/.test(key)){
+    say('This page needs an invite link. <a href="/">Read about Áron</a>.');
+    return;
+  }
+  fetch(host+'/up',{cache:'no-store'}).then(function(r){
+    if(!r.ok) throw 0;
+    var f=document.createElement('iframe');
+    f.src=host+'/'+key;
+    f.title='Áron';
+    f.allow='microphone; autoplay; speaker-selection';
+    f.referrerPolicy='no-referrer';
+    document.body.appendChild(f);
+  }).catch(function(){
+    say('The Áron trial is paused right now. Please try again later.');
+  });
+})();
+</script>
+</body>
+</html>
