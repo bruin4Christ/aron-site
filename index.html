@@ -65,8 +65,9 @@ nav .wrap{display:flex;align-items:center;justify-content:space-between;height:6
 .brand{font-family:Fraunces,serif;font-size:22px;font-weight:600;text-decoration:none}
 .brand span{color:var(--gold)}
 nav .links{display:flex;gap:22px;align-items:center;font-size:15px;color:var(--mute)}
-nav .links a{text-decoration:none}
+nav .links a{text-decoration:none;white-space:nowrap}
 nav .links a:hover{color:var(--ink)}
+@media (max-width:900px){nav .links .hide-md{display:none}}
 @media (max-width:640px){nav .links .hide-sm{display:none}}
 
 .btn{display:inline-flex;align-items:center;gap:8px;padding:13px 22px;border-radius:999px;font-weight:600;font-size:16px;text-decoration:none;transition:transform .15s,box-shadow .2s,background .2s}
@@ -241,11 +242,12 @@ footer .wrap{display:flex;justify-content:space-between;gap:16px;flex-wrap:wrap}
   <a class="brand" href="#">Á<span>r</span>on</a>
   <div class="links">
     <a class="hide-sm" href="#why">Why Áron</a>
-    <a class="hide-sm" href="#languages">Languages</a>
+    <a class="hide-sm" href="#further">What's different</a>
+    <a class="hide-sm hide-md" href="#languages">Languages</a>
     <a class="hide-sm" href="#cost">Cost</a>
-    <a class="hide-sm" href="#how">How it works</a>
+    <a class="hide-sm hide-md" href="#how">How it works</a>
     <a class="hide-sm" href="#faq">FAQ</a>
-    <a class="hide-sm" href="https://github.com/seekeroftruth27/aron-translate">GitHub</a>
+    <a class="hide-sm hide-md" href="https://github.com/seekeroftruth27/aron-translate">GitHub</a>
     <a class="btn primary sm" href="https://github.com/seekeroftruth27/aron-translate/releases/latest/download/church-translate.exe" download>Download</a>
   </div>
 </div></nav>
@@ -634,6 +636,22 @@ footer .wrap{display:flex;justify-content:space-between;gap:16px;flex-wrap:wrap}
   </div>
 </div></section>
 
+<section id="further"><div class="wrap">
+  <div class="sec-head rv">
+    <h2>What you won't find elsewhere</h2>
+    <p>We looked at what other church translation services offer. These are things none of them advertise.</p>
+  </div>
+  <div class="features">
+    <div class="feat rv"><div class="ic"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M9 18V5l12-2v13"/><circle cx="6" cy="18" r="3"/><circle cx="18" cy="16" r="3"/><path d="M3 3l18 18"/></svg></div>
+      <h3>Quiet for the songs</h3><p>Áron can hear when the worship team starts and mute itself, so no lyrics turn into prose on the wall and nothing is billed. When the preacher speaks again, the captions come back by themselves. An experimental mode does the same for communal prayer.</p></div>
+    <div class="feat rv"><div class="ic"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M9 11l3 3L22 4"/><path d="M21 12v7a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h11"/></svg></div>
+      <h3>Checks its own work</h3><p>Every line gets a quick second look from another AI model. When a word sounds misheard or the meaning is in doubt, a stronger model redoes the line. <a href="#why">How the router works</a>.</p></div>
+    <div class="feat rv"><div class="ic"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="9" cy="7" r="4"/><path d="M3 21v-2a4 4 0 0 1 4-4h4a4 4 0 0 1 4 4v2M17 8a4 4 0 0 1 0 6M20 5a8 8 0 0 1 0 12"/></svg></div>
+      <h3>The preacher's voice, live</h3><p>Other services read the translation in a stock voice, or offer the preacher's own voice in a dubbed replay hours later. Áron can speak it in the preacher's voice during the service, with their permission.</p></div>
+  </div>
+  <p class="note">Based on what other church translation services advertised in November 2026.</p>
+</div></section>
+
 <section id="compare"><div class="wrap">
   <div class="sec-head rv">
     <h2>How Áron compares</h2>
@@ -646,6 +664,8 @@ footer .wrap{display:flex;justify-content:space-between;gap:16px;flex-wrap:wrap}
       <tr><th>Model costs</th><td class="us">Paid to the providers at list price, from about $0.15 an hour</td><td class="them">Bundled into the fee, with the vendor's margin on top</td></tr>
       <tr><th>Which models</th><td class="us">You choose, including the strongest available</td><td class="them">The vendor chooses, and often doesn't say which. On a flat fee, every stronger model eats into their margin.</td></tr>
       <tr><th>New models</th><td class="us">Tested on sermons and added as they launch</td><td class="them">Whenever the vendor upgrades</td></tr>
+      <tr><th>Songs and prayer</th><td class="us">Can mute itself while the worship team plays, so nothing goes on the wall and nothing is billed</td><td class="them">Captions whatever it hears, songs included, unless someone pauses it</td></tr>
+      <tr><th>Spoken voice</th><td class="us">Live, in the preacher's own voice if they agree</td><td class="them">A stock AI voice. Where the preacher's voice is offered, it's a dubbed replay afterwards.</td></tr>
       <tr><th>Sermon-aware</th><td class="us">Scripture rules, church glossary, idioms, reverent wording</td><td class="them">Usually general-purpose translation</td></tr>
       <tr><th>Your data</th><td class="us">Runs on your computer. Audio goes only to the providers you pick.</td><td class="them">Passes through the vendor's servers</td></tr>
       <tr><th>Lock-in</th><td class="us">None. The keys and accounts are yours.</td><td class="them">Contract and account with the vendor</td></tr>
@@ -687,6 +707,8 @@ footer .wrap{display:flex;justify-content:space-between;gap:16px;flex-wrap:wrap}
     <details class="rv"><summary>What languages does it translate?</summary><p>It recognizes 60 spoken languages automatically and captions into all 60 with Soniox alone, and up to 150 with GPT‑6 Sol, from Spanish and Korean to Karen, Hmong and Amharic. The <a href="#languages">full tables</a> list them, and which can also be spoken. For a bilingual service it switches direction by itself when the speaker changes language.</p></details>
     <details class="rv"><summary>Does it work with ProPresenter?</summary><p>Yes. Point a ProPresenter web object at Áron's caption strip, or let Áron send the live translation into a ProPresenter message. There's also a plain full-screen caption page for any projector.</p></details>
     <details class="rv"><summary>Can people follow on their phones?</summary><p>Yes. Áron can stream captions, and optionally the spoken translation, to a page on your church's website. Put a QR code in the bulletin and people read along in the room or from home.</p></details>
+    <details class="rv"><summary>Does it translate the worship songs?</summary><p>No, and on purpose. A song translated line by line reads as clumsy prose, and it's billed like speech. Turn on <b>Gate music</b> and Áron mutes itself when the music starts and comes back when the preacher speaks. You can also mute and unmute it with one click.</p></details>
+    <details class="rv"><summary>Can it caption our YouTube livestream?</summary><p>Yes. YouTube's own live captions are English only, so a service in another language normally has none. Áron can post its live translation to your stream as captions, timed to the words, in the language you choose.</p></details>
     <details class="rv"><summary>What do we need to run it?</summary><p>A Windows 10 or 11 computer, or a Linux PC or Raspberry Pi 4/5, with an internet connection and an audio feed from your sound desk or a microphone. All the heavy work runs in the cloud, so you don't need a powerful machine or any special hardware.</p></details>
     <details class="rv"><summary>How is this different from paid church translation services?</summary><p>Many paid services are built on the same kind of cloud speech and AI models and charge a subscription or per-minute rate on top. Áron lets you use the best models directly, at their own price, with nobody in between. <a href="#compare">See the comparison</a>.</p></details>
   </div>
